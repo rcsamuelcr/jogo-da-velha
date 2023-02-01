@@ -250,7 +250,13 @@ function computerPlay(){
             if(randomNumber <= 1){
                 boxes[i].appendChild(cloneO);
                 counter++;
+                break
             }
+        }else {
+            filled++;
         }
     }
-}
+    if(counter == 0 && filled < 9){
+        computerPlay();
+    }
+}      
